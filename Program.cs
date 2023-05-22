@@ -1,9 +1,14 @@
+using Modules.Account.Extensions;
+using Modules.Shared.Extensions;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
+var app = builder.Build();
+
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+builder.Services.AddSharedInfrastructure(app.Configuration);
+builder.Services.AddAccountModule(app.Configuration);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -23,5 +28,4 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 app.Run();

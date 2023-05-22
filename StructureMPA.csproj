@@ -19,6 +19,13 @@
     <Reference Include="Modules.Account">
       <HintPath>bin\Debug\net7.0\Modules.Account.dll</HintPath>
     </Reference>
+    <Reference Include="Modules.Shared">
+      <HintPath>bin\Debug\net7.0\Modules.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OdeToCode.AddFeatureFolders" Version="2.0.3" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace Modules.Account
+namespace Modules.Account.Models
 {
     public class Account
     {

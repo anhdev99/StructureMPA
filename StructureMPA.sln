@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{BECB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Account", "Areas\Modules.Account\Modules.Account.csproj", "{5A5413A9-A09C-49FC-ADA9-71B8DFCBF4A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Shared", "Areas\Modules.Shared\Modules.Shared.csproj", "{D91139E9-0A1F-4800-B7FD-76979B23590B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{5A5413A9-A09C-49FC-ADA9-71B8DFCBF4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A5413A9-A09C-49FC-ADA9-71B8DFCBF4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A5413A9-A09C-49FC-ADA9-71B8DFCBF4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91139E9-0A1F-4800-B7FD-76979B23590B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91139E9-0A1F-4800-B7FD-76979B23590B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91139E9-0A1F-4800-B7FD-76979B23590B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91139E9-0A1F-4800-B7FD-76979B23590B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5A5413A9-A09C-49FC-ADA9-71B8DFCBF4A2} = {BECB18CB-A621-4217-902E-EEA9184C8017}
+		{D91139E9-0A1F-4800-B7FD-76979B23590B} = {BECB18CB-A621-4217-902E-EEA9184C8017}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {914057AB-0226-4617-B362-329B6EF4090D}
