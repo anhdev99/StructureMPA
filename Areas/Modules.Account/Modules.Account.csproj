@@ -21,7 +21,9 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="start xcopy /y /r &quot;$(ProjectDir)\bin\Debug\net7.0\*.dll&quot; &quot;$(ProjectDir)..\..\bin\Debug\net7.0\&quot;" />
+    <ItemGroup>
+      <ANTLR Include="$(ProjectDir)bin\Debug\net7.0\*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ANTLR)" DestinationFolder="$(ProjectDir)..\..\bin\Debug\net7.0\" />
   </Target>
-
 </Project>

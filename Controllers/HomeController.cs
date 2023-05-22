@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Modules.Account;
+// using Modules.Account;
 using StructureMPA.Models;
 using System.Diagnostics;
 
@@ -16,9 +16,9 @@ namespace StructureMPA.Controllers
 
         public IActionResult Index()
         {
-            Account account = new Account("TuanKiet", "Kiet@123");
+            // Account account = new Account("TuanKiet", "Kiet@123");
 
-            account.ShowUserTemp();
+            // account.ShowUserTemp();
 
             return View();
         }
