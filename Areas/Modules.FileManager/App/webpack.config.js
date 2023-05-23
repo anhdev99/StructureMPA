@@ -108,7 +108,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'fileManager/css/[name].bundle.css'
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
   ],
   optimization: {
     runtimeChunk: 'single',
