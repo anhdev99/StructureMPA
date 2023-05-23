@@ -12,22 +12,11 @@
       <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Compile Remove="Assets\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Remove="Assets\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="Assets\**" />
-    </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <ItemGroup>
       <ANTLR Include="$(ProjectDir)bin\Debug\net7.0\*.dll" />
     </ItemGroup>
     <Copy SourceFiles="@(ANTLR)" DestinationFolder="$(ProjectDir)..\..\bin\Debug\net7.0\" />
+
   </Target>
 </Project>
