@@ -2,12 +2,13 @@ using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using Modules.Account.Controllers;
-namespace Modules.Account.Extensions
+using Modules.FileManager.Controllers;
+
+namespace Modules.FileManager.Extensions
 {
     public static class ModuleExtensions
     {
-        public static IServiceCollection AddAccountModule(this IServiceCollection services, IConfiguration configuration = null)
+        public static IServiceCollection AddFileManagerModule(this IServiceCollection services, IConfiguration configuration = null)
         {
 
             var assembly = typeof(HomeController).Assembly;

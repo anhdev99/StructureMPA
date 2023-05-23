@@ -1,13 +1,16 @@
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.FileProviders;
 using Modules.Account.Extensions;
+using Modules.FileManager.Extensions;
 using Modules.Shared.Extensions;
+
 using StructureMPA.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();;
 
 builder.Services.AddAccountModule();
+builder.Services.AddFileManagerModule();
 
 builder.Services.Configure<RazorViewEngineOptions>(options => {
     options.ViewLocationExpanders.Add(new AreaViewLocationExpander());

@@ -23,6 +23,9 @@
     <Reference Include="Modules.Account">
       <HintPath>bin\Debug\net7.0\Modules.Account.dll</HintPath>
     </Reference>
+    <Reference Include="Modules.FileManager">
+      <HintPath>bin\Debug\net7.0\Modules.FileManager.dll</HintPath>
+    </Reference>
     <Reference Include="Modules.Shared">
       <HintPath>bin\Debug\net7.0\Modules.Shared.dll</HintPath>
     </Reference>
@@ -30,7 +33,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.0" />
-    <PackageReference Include="OdeToCode.AddFeatureFolders" Version="2.0.3" />
   </ItemGroup>
   <Target Name="UpdateTargetPath" BeforeTargets="AssignRazorGenerateTargetPaths">
     <ItemGroup>
