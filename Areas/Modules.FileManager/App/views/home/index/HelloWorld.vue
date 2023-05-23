@@ -1,7 +1,7 @@
 ﻿<template>
   <default-layout>
     <b-container class="test-global-css test-scoped-css">
-      duy
+     dafsf
     </b-container>
   </default-layout>
 </template>

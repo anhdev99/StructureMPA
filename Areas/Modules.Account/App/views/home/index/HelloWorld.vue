@@ -1,7 +1,7 @@
 ﻿<template>
   <default-layout>
     <b-container class="test-global-css test-scoped-css">
-      Kiet 123
+      Kiet sadasdasd
     </b-container>
   </default-layout>
 </template>

@@ -83,15 +83,17 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: false,
+    watchContentBase: true,
+    historyApiFallback: true,
     hot: true,
+    open: true,
     noInfo: true,
     overlay: true,
-    https: true,
+    https: false,
     port: 9000,
     proxy: {
       '*': {
-        target: 'https://localhost:5001',
+        target: 'https://localhost:7264',
         changeOrigin: false,
         secure: false
       }
@@ -103,7 +105,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'account/css/[name].bundle.css'
     }),
-    new CleanWebpackPlugin(),
   ],
   optimization: {
     runtimeChunk: 'single',

@@ -42,6 +42,9 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+        options: {
+          hotReload: true // disables Hot Reload
+        }
       },
       {
         test: [
@@ -83,15 +86,17 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: false,
+    watchContentBase: true,
+    historyApiFallback: true,
     hot: true,
+    open: true,
     noInfo: true,
     overlay: true,
-    https: true,
+    https: false,
     port: 9000,
     proxy: {
       '*': {
-        target: 'https://localhost:5001',
+        target: 'https://localhost:7264',
         changeOrigin: false,
         secure: false
       }
