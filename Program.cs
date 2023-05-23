@@ -1,14 +1,21 @@
+using Microsoft.AspNetCore.Mvc.Razor;
 using Modules.Account.Extensions;
 using Modules.Shared.Extensions;
+using StructureMPA.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();;
+
+builder.Services.AddAccountModule();
+
+builder.Services.Configure<RazorViewEngineOptions>(options => {
+    options.ViewLocationExpanders.Add(new AreaViewLocationExpander());
+});
+
+builder.Services.AddMvc();
 var app = builder.Build();
-
-
 // Add services to the container.
-
 builder.Services.AddSharedInfrastructure(app.Configuration);
-builder.Services.AddAccountModule(app.Configuration);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -24,8 +31,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "areaRoute",
+    pattern:  "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+
 app.Run();

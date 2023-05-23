@@ -13,6 +13,10 @@
     <Content Remove="Areas\**" />
     <EmbeddedResource Remove="Areas\**" />
     <None Remove="Areas\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+    <Content Remove="Models\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +29,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.0" />
     <PackageReference Include="OdeToCode.AddFeatureFolders" Version="2.0.3" />
   </ItemGroup>
-
+  <Target Name="UpdateTargetPath" BeforeTargets="AssignRazorGenerateTargetPaths">
+    <ItemGroup>
+      <RazorGenerate Include="@(RazorGenerate)" Link="$(TargetName)\%(RazorGenerate.RelativeDir)%(RazorGenerate.FileName)%(RazorGenerate.Extension)" />
+    </ItemGroup>
+  </Target>
 </Project>

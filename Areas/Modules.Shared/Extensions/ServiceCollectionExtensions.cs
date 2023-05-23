@@ -6,7 +6,7 @@ namespace Modules.Shared.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddSharedInfrastructure(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddSharedInfrastructure(this IServiceCollection services, IConfiguration config = null)
         {
             services.AddMvcCore()
                 .ConfigureApplicationPartManager(manager =>

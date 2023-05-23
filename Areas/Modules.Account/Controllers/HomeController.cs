@@ -2,7 +2,6 @@
 
 namespace Modules.Account.Controllers
 {
-
     [Area("Account")]
     public class HomeController : Controller
     {

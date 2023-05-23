@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-// using Modules.Account;
-using StructureMPA.Models;
-using System.Diagnostics;
 using Modules.Account.Models;
 
 namespace StructureMPA.Controllers
@@ -27,12 +24,6 @@ namespace StructureMPA.Controllers
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
