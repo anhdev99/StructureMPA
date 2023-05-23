@@ -26,7 +26,28 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = context =>
+    {
+        var headers = context.Context.Response.Headers;
+        var contentType = headers["Content-Type"];
+        if (contentType == "application/x-gzip")
+        {
+            if (context.File.Name.EndsWith("js.gz"))
+            {
+                contentType = "application/javascript";
+            }
+            else if (context.File.Name.EndsWith("css.gz"))
+            {
+                contentType = "text/css";
+            }
+
+            headers.Add("Content-Encoding", "gzip");
+            headers["Content-Type"] = contentType;
+        }
+    }
+});
 
 app.UseRouting();
 
