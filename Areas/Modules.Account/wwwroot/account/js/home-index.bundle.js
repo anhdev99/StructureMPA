@@ -45,7 +45,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelloWorld.vue */ \"./views/home/index/HelloWorld.vue\");\n/* harmony import */ var _utils_app_init_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/app-init.js */ \"./utils/app-init.js\");\n\n\n\nconst app = new vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n  el: '#kietapp',\n  render: h => h(_HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n});\n\n//# sourceURL=webpack://ClientApp/./views/home/index/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelloWorld.vue */ \"./views/home/index/HelloWorld.vue\");\n/* harmony import */ var _utils_app_init_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/app-init.js */ \"./utils/app-init.js\");\n\n\n\nconst app = new vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n  el: '#app',\n  render: h => h(_HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n});\n\n//# sourceURL=webpack://ClientApp/./views/home/index/main.js?");
 
 /***/ }),
 

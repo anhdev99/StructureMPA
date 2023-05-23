@@ -35,7 +35,7 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
   output: {
     path: path.resolve(__dirname, '../wwwroot'),
-    filename: 'js/[name].bundle.js'
+    filename: 'fileManager/js/[name].bundle.js'
   },
   module: {
     rules: [
@@ -101,7 +101,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].bundle.css'
+      filename: 'fileManager/css/[name].bundle.css'
     }),
     new CleanWebpackPlugin(),
   ],
