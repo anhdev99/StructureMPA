@@ -15,7 +15,7 @@
   \*******************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"HelloWorld\",\n  data() {\n    return {\n      name: \"world\",\n      viewModel: viewModel\n    };\n  }\n});\n\n//# sourceURL=webpack://ClientApp/./views/home/index/HelloWorld.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-4.use!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"HelloWorld\",\n  data() {\n    return {\n      name: \"world\"\n    };\n  }\n});\n\n//# sourceURL=webpack://ClientApp/./views/home/index/HelloWorld.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-4.use!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   render: () => (/* binding */ render),\n/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function render() {\n  var _vm = this,\n    _c = _vm._self._c;\n  return _c(\"default-layout\", [_c(\"b-container\", {\n    staticClass: \"test-global-css test-scoped-css\"\n  }, [_vm._v(\"\\n    Hello \" + _vm._s(_vm.name) + \" from Vue!\\n    \"), _c(\"img\", {\n    attrs: {\n      src: __webpack_require__(/*! ../../../assets/images/kajan.png */ \"./assets/images/kajan.png\")\n    }\n  }), _vm._v(\" \"), _c(\"pre\", {\n    staticClass: \"text-white\"\n  }, [_vm._v(\"      \" + _vm._s(JSON.stringify(_vm.viewModel, null, 2)) + \"\\n    \")])])], 1);\n};\nvar staticRenderFns = [];\nrender._withStripped = true;\n\n\n//# sourceURL=webpack://ClientApp/./views/home/index/HelloWorld.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-4.use!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet%5B1%5D.rules%5B2%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   render: () => (/* binding */ render),\n/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function render() {\n  var _vm = this,\n    _c = _vm._self._c;\n  return _c(\"default-layout\", [_c(\"b-container\", {\n    staticClass: \"test-global-css test-scoped-css\"\n  }, [_vm._v(\"\\n    Kiet 123\\n  \")])], 1);\n};\nvar staticRenderFns = [];\nrender._withStripped = true;\n\n\n//# sourceURL=webpack://ClientApp/./views/home/index/HelloWorld.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-4.use!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet%5B1%5D.rules%5B2%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelloWorld.vue */ \"./views/home/index/HelloWorld.vue\");\n/* harmony import */ var _utils_app_init_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/app-init.js */ \"./utils/app-init.js\");\n\n\n\nconst app = new vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n  el: '#app',\n  render: h => h(_HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n});\n\n//# sourceURL=webpack://ClientApp/./views/home/index/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HelloWorld.vue */ \"./views/home/index/HelloWorld.vue\");\n/* harmony import */ var _utils_app_init_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/app-init.js */ \"./utils/app-init.js\");\n\n\n\nconst app = new vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n  el: '#kietapp',\n  render: h => h(_HelloWorld_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n});\n\n//# sourceURL=webpack://ClientApp/./views/home/index/main.js?");
 
 /***/ }),
 
@@ -106,16 +106,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_HelloWorld_vue_vue_type_style_index_0_id_1eec638e_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HelloWorld.vue?vue&type=style&index=0&id=1eec638e&scoped=true&lang=scss& */ \"./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./views/home/index/HelloWorld.vue?vue&type=style&index=0&id=1eec638e&scoped=true&lang=scss&\");\n\n\n//# sourceURL=webpack://ClientApp/./views/home/index/HelloWorld.vue?");
-
-/***/ }),
-
-/***/ "./assets/images/kajan.png":
-/*!*********************************!*\
-  !*** ./assets/images/kajan.png ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"7e8f0a98f7b435d6fb64.png\";\n\n//# sourceURL=webpack://ClientApp/./assets/images/kajan.png?");
 
 /***/ })
 

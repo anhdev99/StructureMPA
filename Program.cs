@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.FileProviders;
 using Modules.Account.Extensions;
 using Modules.Shared.Extensions;
 using StructureMPA.Extensions;
@@ -49,6 +50,12 @@ app.UseStaticFiles(new StaticFileOptions
     }
 });
 
+app.UseStaticFiles(new StaticFileOptions()
+{
+    // Add the other folder, using the Content Root as the base
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "Areas/Modules.Account/wwwroot"))
+});
 app.UseRouting();
 
 app.UseAuthorization();

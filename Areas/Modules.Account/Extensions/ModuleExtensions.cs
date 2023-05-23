@@ -17,6 +17,13 @@ namespace Modules.Account.Extensions
 
             services.Configure<MvcRazorRuntimeCompilationOptions>(options =>
                 { options.FileProviders.Add(new EmbeddedFileProvider(assembly)); });
+            
+            // configuration.UseStaticFiles(new StaticFileOptions()
+            // {
+            //     // Add the other folder, using the Content Root as the base
+            //     FileProvider = new PhysicalFileProvider(
+            //         Path.Combine(builder.Environment.ContentRootPath, "OtherFolder"))
+            // });
             // var assembly = typeof(HomeController).Assembly;
             //
             // services.Configure<MvcRazorRuntimeCompilationOptions>(options =>

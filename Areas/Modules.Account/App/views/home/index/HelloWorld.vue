@@ -1,11 +1,7 @@
 ﻿<template>
   <default-layout>
     <b-container class="test-global-css test-scoped-css">
-      Hello {{ name }} from Vue!
-      <img src="../../../assets/images/kajan.png">
-      <pre class="text-white">
-        {{ JSON.stringify(viewModel, null, 2) }}
-      </pre>
+      Kiet 123
     </b-container>
   </default-layout>
 </template>
@@ -15,8 +11,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      name: "world",
-      viewModel: viewModel,
+      name: "world"
     }
   },
 }
