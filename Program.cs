@@ -56,10 +56,11 @@ app.UseStaticFiles(new StaticFileOptions
 
 app.UseStaticFiles(new StaticFileOptions()
 {
-    FileProvider = new CompositeFileProvider(
-    new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Areas/Modules.Account/wwwroot")),
-    new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Areas/Modules.FileManager/wwwroot"))
-        )
+    FileProvider = new CompositeFileProvider
+    (
+        new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Areas/Modules.Account/wwwroot")),
+        new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Areas/Modules.FileManager/wwwroot"))
+    )
 });
 app.UseRouting();
 

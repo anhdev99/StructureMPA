@@ -31,7 +31,7 @@ glob.sync('./views/**/main.js').forEach(path => {
 });
 
 module.exports = {
-  entry: entries,
+  entry: "./main.js",
   mode: isProduction ? 'production' : 'development',
   output: {
     path: path.resolve(__dirname, '../wwwroot'),
@@ -49,16 +49,26 @@ module.exports = {
         ],
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          {loader: 'css-loader', options: {url: false}},
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('node-sass')
+            }
+          }
         ]
       },
       {
         test: /\.(css|s[ac]ss)$/,
         use: [
           'style-loader',
-          'css-loader',
-          'sass-loader',
+          {loader: 'css-loader', options: {url: false}},
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('node-sass')
+            }
+          }
         ],
         exclude: [
           path.join(__dirname, 'assets/styles/styles.scss')
