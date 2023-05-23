@@ -5,6 +5,18 @@ import routes from './routes'
 
 Vue.use(VueRouter)
 
+// var r = routes.map(value =>{
+//     if(value.path == "/"){
+//         value.path = "/Account" 
+//     }else{
+//         value.path = "/Account" +  value.path; 
+//     }
+//     return value;
+//       
+//     console.log(value.path);
+// })
+// console.log( r)
+
 const router = new VueRouter({
     routes,
     // Use the HTML5 history API (i.e. normal-looking routes)
@@ -25,7 +37,7 @@ const router = new VueRouter({
         }
     },
 })
-
+Vue.lang = 'Account'
 // Before each route evaluates...
 router.beforeEach((routeTo, routeFrom, next) => {
     const publicPages = ['/dang-nhap', '/xac-nhan-ky-so'];
@@ -35,6 +47,18 @@ router.beforeEach((routeTo, routeFrom, next) => {
 
     // if (authpage && !loggeduser) {
     //     return next('/dang-nhap');
+    // }
+    // next();
+    // if ((new RegExp(`^/${Vue.lang}$`))
+    //         .test(to.path)
+    //     ||
+    //     (new RegExp(`^/${Vue.lang}/`))
+    //         .test(to.path))
+    // {
+    //     next();
+    // } else {
+    //
+    //     next({path: `/${Vue.lang}${to.path}`})
     // }
     next();
 })

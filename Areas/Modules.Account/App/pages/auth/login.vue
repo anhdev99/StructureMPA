@@ -1,8 +1,7 @@
 <template>
   <default-layout>
-    <h1 class="title"> Tuấn Kiệt</h1>
-
-    <router-link to="Account/dang-nhap"> Dang Nhap</router-link>
+    <h1 class="title"> Login</h1>
+    <router-link to="/Account"> Return Home</router-link>
   </default-layout>
 </template>
 
@@ -10,7 +9,6 @@
 export default {
   data() {
     return {
-      name: "world"
     }
   },
 }
