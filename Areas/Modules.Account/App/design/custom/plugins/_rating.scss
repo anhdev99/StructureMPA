@@ -14,3 +14,14 @@
 .rating-symbol-foreground {
   top: 0px;
 }
+
+.rating-star{
+  > span{
+    display: inline-block;
+    vertical-align: middle;
+
+    &.badge{
+      margin-left: 4px;
+    }
+  }
+}

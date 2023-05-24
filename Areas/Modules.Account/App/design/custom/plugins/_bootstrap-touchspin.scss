@@ -3,19 +3,23 @@
 // Bootstrap touchspin
 //
 
-.vnis__button {
-  background: $primary !important;
-}
 
-.product-cart-touchspin {
-  .vnis__button {
-    background: none !important;
-    color: black;
+.bootstrap-touchspin{
+    &.input-group{
+      &>.input-group-prepend{
+        &>.btn, &>.input-group-text{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        }
+      }
+    }
+  
+    &.input-group{
+      &>.input-group-append{
+        &>.btn, &>.input-group-text{
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
   }
-}
-
-.vnis__input {
-  border: 1px solid $gray-400 !important;
-  background-color: rgba($topbar-search-bg, 0.07);
-  color: $input-color;
-}

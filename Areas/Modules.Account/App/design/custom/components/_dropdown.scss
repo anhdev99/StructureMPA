@@ -2,43 +2,7 @@
 // _dropdown.scss
 // 
 
-.dropdown-toggle-split {
-  &::before {
-    content: "\F0140";
-    display: inline-block;
-    font: normal normal normal 24px/1 "Material Design Icons";
-    font-size: inherit;
-    text-rendering: auto;
-    line-height: inherit;
-  }
-}
-
-.dropup {
-  .dropdown-toggle-split {
-    &::before {
-      content: "\F0143";
-      display: inline-block;
-      font: normal normal normal 24px/1 "Material Design Icons";
-      font-size: inherit;
-      text-rendering: auto;
-      line-height: inherit;
-    }
-  }
-}
-
-.dropright .dropdown-toggle-split {
-  &::before {
-    content: "\F0142";
-    display: inline-block;
-    font: normal normal normal 24px/1 "Material Design Icons";
-    font-size: inherit;
-    text-rendering: auto;
-    line-height: inherit;
-  }
-}
-
 .dropdown-menu {
-  box-shadow: $box-shadow-lg;
   animation-name: DropDownSlide;
   animation-duration: .3s;
   animation-fill-mode: both;
@@ -47,70 +11,65 @@
   z-index: 1000;
 
   &.show {
-    top: 100% !important;
+    top: 100%!important;
   }
+
+  &[style] {
+    right: auto!important;
+    left: 0;
+  }
+  
 }
 
 .dropdown-menu-end[style] {
-  left: auto !important;
-  right: 0 !important;
+  left: auto!important;
+  right: 0!important;
 }
 
-.dropdown-menu {
-  &:focus-visible {
-    outline: none !important;
-  }
-}
-
-.dropdown-menu[data-popper-placement^=right],
-.dropdown-menu[data-popper-placement^=top],
-.dropdown-menu[data-popper-placement^=left] {
+.dropdown-menu[data-popper-placement^=right],.dropdown-menu[data-popper-placement^=top],.dropdown-menu[data-popper-placement^=left]{
   top: auto !important;
   animation: none !important;
 }
 
 @keyframes DropDownSlide {
   100% {
-    transform: translateY(0)
+      transform: translateY(0)
   }
-
   0% {
-    transform: translateY(10px)
+      transform: translateY(10px)
   }
 }
 
 @media (min-width: 600px) {
   .dropdown-menu-lg {
-    width: 320px;
-  }
-
-  .dropdown-menu-md {
-    width: 240px;
+    width: 300px;
   }
 }
 
-.dropdown-divider {
+.dropdown-divider{
   border-top-color: $border-color;
 }
 
 // Dropdown Mega Menu
 
 .dropdown-mega {
-  position: static !important;
+  position: static!important;
 }
 
-.dropdown-megamenu[style] {
+.dropdown-megamenu {
   padding: 20px;
   left: 20px !important;
   right: 20px !important;
 }
 
-// Dropdown size
+.dropzone  .dz-message{
+  font-size: 30px !important;
+}
 
-.dropdown-mega-menu-xl {
+.dropdown-mega-menu-xl{
   width: 40rem;
 }
 
-.dropdown-mega-menu-lg {
+.dropdown-mega-menu-lg{
   width: 26rem;
 }

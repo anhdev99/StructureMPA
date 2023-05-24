@@ -23,15 +23,64 @@
     }
 }
 
+/* directory */
+.social-links {
+  li {
+    a {
+      margin-bottom: 6px;
+      border-radius: 50%;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      text-align: center;
+    }
+  }
+}
 
 
-// blog
 
-.blog-play-icon{
+
+// FAQ
+
+
+.faq{
+  position: relative;
+  .accordion-header{
+      border:none;
+      background: transparent;
+  }
+} 
+
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid $gray-200 !important;
+    border-radius: 4px !important;
+    box-shadow: none;
+
+  }
+
+  .accordion-button{
+    font-weight: $font-weight-medium;
+  }
+}
+
+.faq[data-bs-toggle=collapse]{
+  &:after {
+    content: '\F0377';
+    display: block;
+    font-family: 'Material Design Icons';
+    font-size: 20px;
+    color: $text-muted;
     position: absolute;
+    right: 20px;
+    font-weight: $font-weight-medium;
     top: 50%;
-    left: 0;
-    right: 0;
+    background-image: none;
     transform: translateY(-50%);
-    margin: 0px auto;
+  }
+  &.collapsed::after {
+    content: '\F0419';
+  }
 }

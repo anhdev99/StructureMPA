@@ -2,22 +2,15 @@
 // chartist.scss
 //
 
-@import "~chartist/dist/chartist.min.css";
-
-.chartjs-chart{
-    max-height: 320px;
-  }
-
 .ct-golden-section:before {
     float: none;
 }
 
 .ct-chart {
     max-height: 300px;
-
     .ct-label {
-        fill: $gray-500;
-        color: $gray-500;
+        fill: $gray-500 !important;
+        color: $gray-500 !important;
         font-size: 12px;
         line-height: 1;
     }
@@ -25,88 +18,81 @@
 
 .ct-chart.simple-pie-chart-chartist {
     .ct-label {
-        color: $white;
-        fill: $white;
+        color: $white !important;
+        fill: $white !important;
         font-size: 16px;
     }
+}
+
+.ct-grid {
+    stroke: rgba($dark, 0.09);
+    stroke-width: 1px;
+    stroke-dasharray: 3px;
 }
 
 .ct-chart {
     .ct-series {
         &.ct-series-a {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $primary;
+                stroke: $primary !important;
             }
         }
-
         &.ct-series-b {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $success;
+                stroke: $success !important;
             }
         }
-
         &.ct-series-c {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $warning;
+                stroke: $warning !important;
             }
         }
-
         &.ct-series-d {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $danger;
+                stroke: $dark !important;
             }
         }
-
         &.ct-series-e {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $info;
+                stroke: $info !important;
             }
         }
-
         &.ct-series-f {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $pink;
+                stroke: $danger !important;
             }
         }
-
         &.ct-series-g {
-
             .ct-bar,
             .ct-line,
             .ct-point,
             .ct-slice-donut {
-                stroke: $primary;
+                stroke: $gray-100 !important;
             }
         }
     }
 }
 
-.ct-series-a {
 
+.ct-series-a {
     .ct-area,
     .ct-slice-pie {
         fill: $primary !important;
@@ -114,31 +100,28 @@
 }
 
 .ct-series-b {
+    .ct-area,
+    .ct-slice-pie {
+        fill: $warning !important;
+    }
+}
 
+.ct-series-c {
+    .ct-area,
+    .ct-slice-pie {
+        fill: $dark !important;
+    }
+}
+
+.ct-series-d {
     .ct-area,
     .ct-slice-pie {
         fill: $success !important;
     }
 }
 
-.ct-series-c {
-
-    .ct-area,
-    .ct-slice-pie {
-        fill: $warning;
-    }
-}
-
-.ct-series-d {
-
-    .ct-area,
-    .ct-slice-pie {
-        fill: $danger !important;
-    }
-}
-
 .ct-area {
-    fill-opacity: 0.33 !important;
+    fill-opacity: .33 !important;
 }
 
 .chartist-tooltip {
@@ -149,13 +132,25 @@
     padding: 2px 10px;
     border-radius: 3px;
     background: $dark;
-    color: $white;
+    color: $gray-300;
     text-align: center;
     pointer-events: none;
     z-index: 1;
-    transition: opacity 0.2s linear;
-
+    transition: opacity .2s linear;
     &.tooltip-show {
         opacity: 1;
     }
 }
+
+.ct-line {
+    stroke-width: 3px !important; 
+}
+
+.ct-point {
+    stroke-width: 7px !important;
+}
+
+
+
+
+  

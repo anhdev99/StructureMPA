@@ -9,7 +9,7 @@
     left: 0;
     z-index: 1002;
     background-color: $header-bg;
-    box-shadow: $box-shadow;
+    
 }
 
 .navbar-header {
@@ -19,11 +19,11 @@
     align-items: center;
     margin: 0 auto;
     height: $header-height;
-    padding: 0 calc(#{$grid-gutter-width} / 2) 0 0 /*rtl: 0 0 0 calc(#{$grid-gutter-width} / 2) */;
+    padding: 0 calc(#{$grid-gutter-width} / 2) 0 0;
 
-    .dropdown .show {
-        &.header-item {
-            background-color: $gray-100;
+    .dropdown {
+        .header-item.show {
+            background: rgba($dark, 0.05);
         }
     }
 }
@@ -54,8 +54,8 @@
     .form-control {
         border: none;
         height: 38px;
-        padding-left: 40px;
-        padding-right: 20px;
+        padding-left: 20px;
+        padding-right: 40px;
         background-color: $topbar-search-bg;
         box-shadow: none;
         border-radius: 30px;
@@ -63,11 +63,11 @@
     span {
         position: absolute;
         z-index: 10;
-        font-size: 16px;
+        font-size: 13px;
         line-height: 38px;
-        left: 13px;
+        right: 13px;
         top: 0;
-        color: $gray-600;
+        color: $header-item-color;
     }
 }
 
@@ -101,7 +101,7 @@
 }
 
 .page-content {
-    padding: calc(#{$header-height} + #{$grid-gutter-width}) calc(#{$grid-gutter-width} / 2) $footer-height calc(#{$grid-gutter-width} / 2);
+    padding: $header-height calc(#{$grid-gutter-width} / 2) $footer-height calc(#{$grid-gutter-width} / 2);
 }
 
 .header-item {
@@ -117,22 +117,21 @@
 }
 
 .header-profile-user {
-    height: 36px;
-    width: 36px;
+    height: 32px;
+    width: 32px;
     background-color: $gray-300;
-    padding: 3px;
 }
 
 .noti-icon {
     i {
-        font-size: 22px;
+        font-size: 24px;
         color: $header-item-color;
     }
 
     .badge {
         position: absolute;
-        top: 12px;
-        right: 4px;
+        top: 17px;
+        right: 7px;
     }
 }
 
@@ -141,7 +140,7 @@
         padding: 0.75rem 1rem;
 
         &:hover {
-            background-color: $gray-300;
+            background-color: $gray-100;
         }
     }
 }
@@ -169,15 +168,15 @@
     }
 
     &:hover {
-        border-color: $border-color;
+        background-color: $gray-100;
     }
 }
 
 // Full Screen
 .fullscreen-enable {
-    [data-toggle="fullscreen"] {
-        .bx-fullscreen::before {
-            content: "\ea3f";
+    [data-bs-toggle="fullscreen"] {
+        .mdi-fullscreen::before {
+            content: "\F0294";
         }
     }
 }
@@ -187,14 +186,10 @@ body[data-topbar="dark"] {
         background-color: $header-dark-bg;
     }
     .navbar-header {
-        .dropdown .show {
-            &.header-item {
+        .dropdown.show {
+            .header-item {
                 background-color: rgba($white, 0.05);
             }
-        }
-
-        .waves-effect .waves-ripple {
-            background: rgba($white, 0.4);
         }
     }
 
@@ -229,6 +224,7 @@ body[data-topbar="dark"] {
         .form-control {
             background-color: rgba($topbar-search-bg,0.07);
             color: $white;
+            border: 1px solid rgba($white,0.07);
         }
         span,
         input.form-control::-webkit-input-placeholder {
@@ -239,7 +235,23 @@ body[data-topbar="dark"] {
 
 body[data-sidebar="dark"] {
     .navbar-brand-box {
-        background: $sidebar-dark-bg;
+        background: #045E90;
+    }
+
+    .logo-dark {
+        display: none;
+    }
+
+    .logo-light {
+        display: block;
+    }
+}
+
+// Colored sidebar
+
+body[data-sidebar="colored"] {
+    .navbar-brand-box {
+        background: $sidebar-colored-bg;
     }
 
     .logo-dark {
@@ -270,20 +282,34 @@ body[data-sidebar="dark"] {
     }
 }
 
+
 body[data-layout="horizontal"] {
+    
+    .navbar-header{
+        padding: 0 calc(#{$grid-gutter-width} / 2) ;
+    }
+
     .navbar-brand-box {
         width: auto;
+        padding-left: 0px;
     }
     .page-content {
         margin-top: $header-height;
-        padding: calc(55px + #{$grid-gutter-width}) calc(#{$grid-gutter-width} / 2) $footer-height calc(#{$grid-gutter-width} / 2);
+        padding: 54px calc(#{$grid-gutter-width} / 2) $footer-height calc(#{$grid-gutter-width} / 2);
     }    
 }
 
 @media (max-width: 992px) { 
     body[data-layout="horizontal"] {
+        .navbar-brand-box {
+            width: auto;
+            padding-left: 5px;
+        }
+        // #page-topbar {
+        //     padding: 0px; 
+        // }
         .page-content {
-            margin-top: 15px;
+            margin-top: 10px;
         }    
     }
 }

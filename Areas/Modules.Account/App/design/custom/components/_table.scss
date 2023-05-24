@@ -4,16 +4,20 @@
 
 .table {
   th {
-      font-weight: $font-weight-bold;
-      &:focus {
-        outline: none !important
-      }
+      font-weight: $font-weight-medium;
   }
+}
 
-  .table-light{
-    color: $body-color;
-    border-color: $table-border-color;
-    background-color: $table-head-bg;
+//Table centered
+.table-centered {
+  td,th {
+      vertical-align: middle !important;
+  }
+}
+
+.table-nowrap {
+  th, td {
+    white-space: nowrap;
   }
 }
 
@@ -25,16 +29,3 @@
     border: $table-border-width solid $table-border-color;
   }
 }
-
-
-.table-dark>:not(:last-child)>:last-child>*{
-  border-bottom-color:  $table-dark-border-color;
-}
-
-.table-nowrap {
-  th, td {
-    white-space: nowrap;
-  }
-}
-
-

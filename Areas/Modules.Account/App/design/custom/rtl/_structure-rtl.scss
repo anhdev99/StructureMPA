@@ -8,10 +8,14 @@
     padding: 0 0 0 calc(#{$grid-gutter-width} / 2);
 }
 
-.noti-icon {
-    .badge{
-        right: auto;
-        left: 4px;
+
+.topnav {
+    .navbar-nav {
+        .nav-link {
+            i{
+                float: right;
+            }
+        } 
     }
 }
 
@@ -23,6 +27,15 @@
 .footer{
     left: 0px;
     right: $sidebar-width;
+}
+
+/* Search */
+
+.app-search {
+    span {
+        left: 13px;
+        right: auto;
+    }
 }
 
 // Sidebar
@@ -39,16 +52,6 @@
                 li {
                     a{
                         padding: .4rem 3.5rem .4rem 1.5rem;
-                    }
-
-                    ul.sub-menu {
-
-                        li {
-                            a {
-                                padding: .4rem 4.5rem .4rem 1.5rem;
-                                font-size: 13.5px;
-                            }
-                        }
                     }
                 }
             }
@@ -143,19 +146,8 @@ body[data-sidebar-size=small] {
         ul {
             li {
                 ul.sub-menu {
-                    li {
-                        a{
-                            padding-right: 1.5rem;
-                        }
-
-                        ul.sub-menu {
-    
-                            li {
-                                a {
-                                    padding-right: 1.5rem;
-                                }
-                            }
-                        }
+                    li a{
+                        padding-right: 1.5rem;
                     }
                 }
             }
@@ -209,11 +201,12 @@ body[data-layout=horizontal] {
                 }
             }
         }
-
         .dropdown {
-            .dropdown-menu{
-                right: 0px;
-                left: auto;
+            &.mega-dropdown{
+                .mega-dropdown-menu{
+                    right: 0px;
+                    left: auto;
+                }
             }
         }
     }
@@ -223,7 +216,6 @@ body[data-layout=horizontal] {
     &:after{
         margin-left: 0px;
         margin-right: 10px;
-        left: 5px;
     }
 }
 
@@ -263,17 +255,4 @@ body[data-layout=horizontal] {
             }
         }
     }
-}
-
-
-@media (max-width: 767.98px){
-    .topnav {
-        .arrow-down{
-            &:after{
-                    left: 15px;
-                    position: absolute;
-                    right: auto;
-            }
-        } 
-    }  
 }

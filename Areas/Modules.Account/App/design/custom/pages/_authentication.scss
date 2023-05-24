@@ -3,6 +3,56 @@
 //
 
 
+// login-1
+
+.account-pages {
+    .logo-admin {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        width: 74px;
+        height: 74px;
+        line-height: 74px;
+        background: $card-bg;
+        border-radius: 50%;
+        border-bottom: 2px solid $success;
+      }
+}
+
+//  login-2
+
+.accountbg {
+    position: absolute;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  
+  .account-page-full {
+    left: 0;
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    width: 420px;
+    background-color: $card-bg;
+  
+    .card {
+      border: none;
+    }
+  }
+  
+  .account-copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+
+
+
 // authentication home icon
 .home-btn {
     position: absolute;
@@ -10,80 +60,50 @@
     right: 25px;
 }
 
-// auth 2
 
-.auth-logo{
-    .auth-logo-dark{
-        display: $display-block;
-    }
-    .auth-logo-light{
-        display: $display-none;
-    }
-}
+//  Maintenance
 
-.auth-body-bg{
-    background-color: $card-bg;
+.maintenance-img {
+    img {
+        max-width: 320px;
+      }     
 }
 
 
-// auth-pass-inputgroup
+// Coundown
 
-.auth-pass-inputgroup{
-    input[type="input"] + .btn .mdi-eye-outline{
-        &:before{
-            content: "\F06D1";
-        }
-    }
+/*------------ Subscriber --------------*/
+
+
+.coming-soon-search-form {
+  input {
+      padding: 15px 20px;
+      width: 100%;
+      color: $gray-800;
+      border: 2px solid $gray-200;
+      outline: none !important;
+      padding-right: 180px;
+      padding-left: 30px;
+      border-radius: 30px;
+      background-color: $card-bg;
+  }
+  button {
+      position: absolute;
+      top: 7px;
+      right: 8px;
+      outline: none !important;
+      border-radius: 30px;
+      padding: 9px 30px;
+  }
+  form {
+      position: relative;
+      max-width: 600px;
+      margin: 0px auto;
+  }
 }
 
-// authentication full page
 
-.auth-full-bg{
-    background-color: rgba($primary, 0.25);
-    display: flex;
 
-    @media (min-width: 1200px){
-        height: 100vh;
-    }
-    
+  
 
-    &::before{
-        content: "";
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-    }
-
-    .bg-overlay{
-        background: url("~@/assets/images/bg-auth-overlay.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
-
-.auth-full-page-content{
-    display: flex;
-
-    @media (min-width: 1200px){
-        min-height: 100vh;
-    }
-}
-
-.auth-review-carousel{
-    &.owl-theme {
-        .owl-dots {
-            .owl-dot{
-                span{
-                    background-color: rgba($primary, 0.25);
-                }
-                &.active, &:hover{
-                    span{
-                        background-color: $primary;
-                    }
-                }
-            }
-        }
-    }
-}
+ 

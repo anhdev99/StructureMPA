@@ -20,7 +20,6 @@
         height: 24px;
         width: 24px;
         line-height: 24px;
-        display: block;
         color: $gray-200;
         text-align: center;
         border-radius: 50%;
@@ -53,7 +52,7 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .right-bar {
         overflow: auto;
         .slimscroll-menu {
