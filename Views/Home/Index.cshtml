@@ -1,8 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "/Areas/Modules.Shared/Views/Layouts/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div id="app"></div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/dashboard/js/runtime.bundle.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/dashboard/js/core.bundle.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/dashboard/js/vendor.bundle.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/dashboard/js/layout-container.bundle.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/dashboard/js/pages_home_index_vue.bundle.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/dashboard/js/main.bundle.js" asp-append-version="true"></script>
+}

@@ -7,7 +7,6 @@ namespace Modules.Account.Models
         public string Password { get; set; }
 
         public Account() { }
-
         public Account(string username, string password)
         {
             UserName = username;
