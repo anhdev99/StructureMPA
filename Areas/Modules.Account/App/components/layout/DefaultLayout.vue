@@ -2,8 +2,8 @@
   <div id="layout-wrapper">
     <SideBar  />
     <div class="main-content">
-      <div class="page-content">
-        <div class="container-fluid" style="padding: 10px 0px">
+      <div class="px-2">
+        <div class="" style="padding: 10px 0px">
         
           <div class="row">
             <div class="col-12">

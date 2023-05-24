@@ -1,5 +1,5 @@
 <script>
-import simplebar from "simplebar-vue"
+import simplebar from 'simplebar-vue';
 
 import SideNav from "./side-nav.vue";
 
@@ -124,7 +124,7 @@ export default {
 
 <template>
   <!-- ========== Left Sidebar Start ========== -->
-  <div class="vertical-menu">
+  <div class="vertical-menu" style="background-color: black">
     <simplebar
         v-if="!isCondensed"
         :settings="settings"
