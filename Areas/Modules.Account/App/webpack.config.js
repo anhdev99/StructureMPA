@@ -18,17 +18,17 @@ entries['styles'] = path.join(__dirname, 'assets/styles/styles.scss');
 
 const IGNORE_PATHS = ['unused'];
 
-glob.sync('./views/**/main.js').forEach(path => {
-  const chunk = path.split('./views/')[1].split('/main.js')[0]
-  if (IGNORE_PATHS.every(path => !chunk.includes(path))) {
-    if (!chunk.includes('/')) {
-      entries[chunk] = path
-    } else {
-      const joinChunk = chunk.split('/').join('-')
-      entries[joinChunk] = path
-    }
-  }
-});
+// glob.sync('./views/**/main.js').forEach(path => {
+//   const chunk = path.split('./views/')[1].split('/main.js')[0]
+//   if (IGNORE_PATHS.every(path => !chunk.includes(path))) {
+//     if (!chunk.includes('/')) {
+//       entries[chunk] = path
+//     } else {
+//       const joinChunk = chunk.split('/').join('-')
+//       entries[joinChunk] = path
+//     }
+//   }
+// });
 
 module.exports = {
   entry: "./main.js",
@@ -42,21 +42,6 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-      },
-      {
-        test: [
-          path.join(__dirname, 'assets/styles/styles.scss'),
-        ],
-        use: [
-          MiniCssExtractPlugin.loader,
-          {loader: 'css-loader', options: {url: false}},
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('node-sass')
-            }
-          }
-        ]
       },
       {
         test: /\.(css|s[ac]ss)$/,

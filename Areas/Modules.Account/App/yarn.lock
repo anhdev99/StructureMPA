@@ -922,6 +922,71 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
+"@fullcalendar/bootstrap@^5.7.2":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/bootstrap/-/bootstrap-5.11.5.tgz#97de88d5b7821d575fd6259e826d8f8b9a3f3e9b"
+  integrity sha512-btsVVJuLQ9UNTj0SeHNHxwM3uzfHi6RsjtMQs13sXzp3tu2d6FTI849VJHs81GfTZp+fwK0RD2tZ/eswN58A5Q==
+  dependencies:
+    "@fullcalendar/common" "~5.11.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/common@~5.11.5":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.11.5.tgz#1a30a852b33ab5c1b04f4ee558941bed3c72d07f"
+  integrity sha512-3iAYiUbHXhjSVXnYWz27Od2cslztUPsOwiwKlfGvQxBixv2Kl6a8IPwaijKFYJHXdwYmfPoEgK7rvqAGVoIYwA==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fullcalendar/core@^5.7.2", "@fullcalendar/core@~5.11.5":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-5.11.5.tgz#0a5265a84f7c35969df64baf6417fa85a31cae7c"
+  integrity sha512-M/WQuq1+uUHxFDEIu2ib/aaPZ70VsRk2ITECo/WCLSLTVWcHPXwEg83reyP3G8JrMM4gRL4vScEHhX0U5aoNSw==
+  dependencies:
+    "@fullcalendar/common" "~5.11.5"
+    preact "~10.12.1"
+    tslib "^2.1.0"
+
+"@fullcalendar/daygrid@^5.7.2", "@fullcalendar/daygrid@~5.11.5":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.11.5.tgz#2825ed691eadf72c6a2979bcde871de74681fc7a"
+  integrity sha512-hMpq0U3Nucys2jDD+crbkJCr+tVt3fDw04OE3fbpisuzqtrHxIzRmnUOdbWUjJQyToAAkt7UVUQ9E7hYdmvyGA==
+  dependencies:
+    "@fullcalendar/common" "~5.11.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/interaction@^5.7.2":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-5.11.5.tgz#035f9650edd0ee795e4c81505ae38aaf3a344bf1"
+  integrity sha512-Vg9uw8zKXZc2RP7it88U8R/kxJIQsK4pyv+s+RhlvT5NBZ9KLOh5y2xGCS4A4hyY7qLrzugxnKYlu6NwNqJ/RQ==
+  dependencies:
+    "@fullcalendar/common" "~5.11.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/list@^5.7.2":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-5.11.5.tgz#0440383f795a6a754f0b62d089ed3ffdf5603845"
+  integrity sha512-ZYMPT4CVt9tIYkVVNx7CKkB2xc+n9L56+vgXkurptgYgPsacXYkcpF/1Hy/B5LKlg0ROEF9Qfftjow8xjANqaA==
+  dependencies:
+    "@fullcalendar/common" "~5.11.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/timegrid@^5.11.2":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-5.11.5.tgz#b2a823c6102acaa58f1958fb1a67a5a1951bc076"
+  integrity sha512-OEH5mrTclwxgUbb51N6qr7ifzNkR74ygUEFpiMLyyUjkp7a76N6BsAP5mBQnTOpTTUZBu9tAOmfcnvi7skUayQ==
+  dependencies:
+    "@fullcalendar/common" "~5.11.5"
+    "@fullcalendar/daygrid" "~5.11.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/vue@^5.11.0":
+  version "5.11.5"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/vue/-/vue-5.11.5.tgz#d4112f605abb23a3782994598416a59d8ebb5c3a"
+  integrity sha512-cgeLwrU6Idx2C6cYiswhILiQMFZCzhlhz9a7ydcMpFwGgba1rVC9A+PZEEe5bZt8MfOwGhh01V/vngCpI8t8jA==
+  dependencies:
+    "@fullcalendar/core" "~5.11.5"
+    tslib "^2.1.0"
+
 "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
@@ -2129,10 +2194,33 @@ chalk@^2.0.0, chalk@^2.4.1:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chartist@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/chartist/-/chartist-1.3.0.tgz#ade0cadeb3d443377438a17b6866ccd125d5f079"
-  integrity sha512-M3ckI3ua7EHt08WLZvdi3QXn5g+in27qU6TxjI5bpriS6QwIZlWtisyUhFbpGclW546SlT3SL9oq0vFFDiAo6g==
+chart.js@2.9.4:
+  version "2.9.4"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.4.tgz#0827f9563faffb2dc5c06562f8eb10337d5b9684"
+  integrity sha512-B07aAzxcrikjAPyV+01j7BmOpxtQETxTSlQ26BEYJ+3iUkbNKaOJ/nDbT6JjyqYxseM0ON12COHYdU2cTIjC7A==
+  dependencies:
+    chartjs-color "^2.1.0"
+    moment "^2.10.2"
+
+chartist@^0.11.4:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/chartist/-/chartist-0.11.4.tgz#e96e1c573d8b67478920a3a6ae52359d9fc8d8b7"
+  integrity sha512-H4AimxaUD738/u9Mq8t27J4lh6STsLi4BQHt65nOtpLk3xyrBPaLiLMrHw7/WV9CmsjGA02WihjuL5qpSagLYw==
+
+chartjs-color-string@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/chartjs-color-string/-/chartjs-color-string-0.6.0.tgz#1df096621c0e70720a64f4135ea171d051402f71"
+  integrity sha512-TIB5OKn1hPJvO7JcteW4WY/63v6KwEdt6udfnDE9iCAZgy+V4SrbSxoIbTw/xkUIapjEI4ExGtD0+6D3KyFd7A==
+  dependencies:
+    color-name "^1.0.0"
+
+chartjs-color@^2.1.0:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/chartjs-color/-/chartjs-color-2.4.1.tgz#6118bba202fe1ea79dd7f7c0f9da93467296c3b0"
+  integrity sha512-haqOg1+Yebys/Ts/9bLo/BqUcONQOdr/hoEr2LLTRl6C5LXctUdHxsCYfvQVg5JIxITrfCNUDr4ntqmQk9+/0w==
+  dependencies:
+    chartjs-color-string "^0.6.0"
+    color-convert "^1.9.3"
 
 chokidar@^2.1.8:
   version "2.1.8"
@@ -2643,6 +2731,11 @@ csstype@^3.1.0:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
+date-format-parse@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/date-format-parse/-/date-format-parse-0.2.7.tgz#a2f78bca857a821785b48abedd4426c65aa7b918"
+  integrity sha512-/+lyMUKoRogMuTeOVii6lUwjbVlesN9YRYLzZT/g3TEZ3uD9QnpjResujeEqUW+OSNbT7T1+SYdyEkTcRv+KDQ==
+
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
@@ -2866,6 +2959,11 @@ dotenv@^16.0.3:
   version "16.0.3"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
   integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
+
+dropzone@^5.5.1:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.9.3.tgz#b3070ae090fa48cbc04c17535635537ca72d70d6"
+  integrity sha512-Azk8kD/2/nJIuVPK+zQ9sjKMRIpRvNyqn9XwbBHNq+iNuSccbJS6hwm1Woy0pMST0erSo0u4j+KJaodndDk4vA==
 
 easy-extender@^2.3.4:
   version "2.3.4"
@@ -5038,6 +5136,11 @@ mlly@^1.0.0, mlly@^1.1.0, mlly@^1.2.0:
     pkg-types "^1.0.3"
     ufo "^1.1.2"
 
+moment@^2.10.2:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 mri@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
@@ -5932,6 +6035,11 @@ postcss@^8.2.15, postcss@^8.2.6, postcss@^8.4.14:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+preact@~10.12.1:
+  version "10.12.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.12.1.tgz#8f9cb5442f560e532729b7d23d42fd1161354a21"
+  integrity sha512-l8386ixSsBdbreOAkqtrwqHwdvR35ID8c3rKPa8lCWuO86dBi32QWHV4vfsZK1utLLFMvw+Z5Ad4XLkZzchscg==
 
 "prettier@^1.18.2 || ^2.0.0":
   version "2.8.8"
@@ -7112,6 +7220,11 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+sweetalert2@10.x:
+  version "10.16.11"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.16.11.tgz#c8604059df2f31e06df56b02bd12b2f07ef7f098"
+  integrity sha512-Rdfabv2G89Tr8vmUTb1auWCYYesKBEWnkYPSi7XaiCIW0ZXXGK8Nw1wYKPEMLU6O8gMSMJe5m6MRKqMQsAQy9A==
+
 tapable@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
@@ -7221,6 +7334,11 @@ trim-newlines@^3.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-2.2.1.tgz#c5bf04a5bbec3fd118be4084461b3a27c4d796bf"
   integrity sha512-0z3j8R7MCjy10kc/g+qg7Ln3alJTodw9aDuVWZa3uiWqfuBMKeAeP2ocWcxoyM3D73yz3Jt/Pu4qPr4wHSdB/Q==
+
+tslib@^2.1.0:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.2.tgz#1b6f07185c881557b0ffa84b111a0106989e8338"
+  integrity sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==
 
 type-fest@^0.18.0:
   version "0.18.1"
@@ -7517,6 +7635,11 @@ vue-demi@*:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.5.tgz#676d0463d1a1266d5ab5cba932e043d8f5f2fbd9"
   integrity sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==
 
+vue-form-wizard@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/vue-form-wizard/-/vue-form-wizard-0.8.4.tgz#ddf864c9709b7ba2a6323f59e5d6d17536b7800e"
+  integrity sha512-/Zk1+B7bz7qHFJ16mwu021lpPXWf/9Tlr2mTNG3J7M0Hdy3rgA802lWsbKYySns0B0qtsD8BYGjQ2Wyxgg+4uw==
+
 vue-functional-data-merge@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
@@ -7538,6 +7661,11 @@ vue-loader@^15.9.6:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-multiselect@^2.1.6:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/vue-multiselect/-/vue-multiselect-2.1.7.tgz#f27afe3d46482b94810382af7a4826219255c47d"
+  integrity sha512-KIegcN+Ntwg3cbkY/jhw2s/+XJUM0Lpi/LcKFYCS8PrZHcWBl2iKCVze7ZCnRj3w8H7/lUJ9v7rj9KQiNxApBw==
+
 vue-router@^3.5.2:
   version "3.6.5"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.6.5.tgz#95847d52b9a7e3f1361cb605c8e6441f202afad8"
@@ -7551,6 +7679,13 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-sweetalert2@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/vue-sweetalert2/-/vue-sweetalert2-4.3.1.tgz#b8111344fa48c011a9b2fb9acfb797ddf65ccda4"
+  integrity sha512-4ZsCpBupG9Q6RJsJ4z/+VkXp0+u5nWz9Z+TcsBU7sS7T47E/ZN3kZSwpCV1F+GdVzurYDcXNcKiwjQ3g7uXzqw==
+  dependencies:
+    sweetalert2 "10.x"
+
 vue-template-compiler@^2.6.12:
   version "2.7.14"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.14.tgz#4545b7dfb88090744c1577ae5ac3f964e61634b1"
@@ -7563,6 +7698,20 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue2-datepicker@^3.9.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/vue2-datepicker/-/vue2-datepicker-3.11.1.tgz#b2124e15f694d0fd43a92558f6929ec29338d241"
+  integrity sha512-6PU/+pnp2mgZAfnSXmbdwj9516XsEvTiw61Q5SNrvvdy8W/FCxk1GAe9UZn/m9YfS5A47yK6XkcjMHbp7aFApA==
+  dependencies:
+    date-format-parse "^0.2.7"
+
+vue2-dropzone@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/vue2-dropzone/-/vue2-dropzone-3.6.0.tgz#b4bb4b64de1cbbb3b88f04b24878e06780a51546"
+  integrity sha512-YXC1nCWIZvfa98e/i6h+EshZCkFSxFEh0Sxr9ODfThAPPDVhAzLLlz/4XIx0NGO1QeSy6htwSstte47R7vVhLQ==
+  dependencies:
+    dropzone "^5.5.1"
 
 vue@^2.6.12:
   version "2.7.14"

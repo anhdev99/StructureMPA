@@ -28,6 +28,7 @@ File: Main Css File
 @import "custom/structure/layouts";
 
 // Components
+@import "custom/components//waves";
 @import "custom/components/avatar";
 @import "custom/components/alert";
 @import "custom/components/helper";
@@ -39,6 +40,7 @@ File: Main Css File
 @import "custom/plugins/bootstrap-touchspin";
 @import "custom/plugins/custom-scrollbar";
 @import "custom/plugins/calendar";
+@import "custom/plugins/range-slider";
 @import "custom/plugins/sweatalert2";
 @import "custom/plugins/rating";
 @import "custom/plugins/parsley";
@@ -47,12 +49,16 @@ File: Main Css File
 @import "custom/plugins/switch";
 @import "custom/plugins/datepicker";
 @import "custom/plugins/datatable";
+@import "custom/plugins/table-editable";
 @import "custom/plugins/form-upload";
 @import "custom/plugins/form-wizard";
 @import "custom/plugins/responsive-table";
+@import "custom/plugins/morris";
 @import "custom/plugins/chartist";
 @import "custom/plugins/apexcharts";
+@import "custom/plugins/sparkline-chart";
 @import "custom/plugins/google-map";
+@import "custom/plugins/form";
 
 // Pages
 @import "custom/pages/authentication";

@@ -26,6 +26,18 @@
       <ProjectReference Include="..\Modules.Shared\Modules.Shared.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="App\design\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="App\design\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="App\design\**" />
+    </ItemGroup>
+
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <ItemGroup>
             <ANTLR Include="$(ProjectDir)bin\Debug\net7.0\*.dll" />

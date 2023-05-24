@@ -124,7 +124,7 @@ export default {
 
 <template>
   <!-- ========== Left Sidebar Start ========== -->
-  <div class="vertical-menu" style="background-color: black">
+  <div class="vertical-menu">
     <simplebar
         v-if="!isCondensed"
         :settings="settings"
