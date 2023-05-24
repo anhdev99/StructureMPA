@@ -18,20 +18,20 @@ entries['styles'] = path.join(__dirname, 'assets/styles/styles.scss');
 
 const IGNORE_PATHS = ['unused'];
 
-glob.sync('./views/**/main.js').forEach(path => {
-  const chunk = path.split('./views/')[1].split('/main.js')[0]
-  if (IGNORE_PATHS.every(path => !chunk.includes(path))) {
-    if (!chunk.includes('/')) {
-      entries[chunk] = path
-    } else {
-      const joinChunk = chunk.split('/').join('-')
-      entries[joinChunk] = path
-    }
-  }
-});
+// glob.sync('./views/**/main.js').forEach(path => {
+//   const chunk = path.split('./views/')[1].split('/main.js')[0]
+//   if (IGNORE_PATHS.every(path => !chunk.includes(path))) {
+//     if (!chunk.includes('/')) {
+//       entries[chunk] = path
+//     } else {
+//       const joinChunk = chunk.split('/').join('-')
+//       entries[joinChunk] = path
+//     }
+//   }
+// });
 
 module.exports = {
-  entry: entries,
+  entry: "./main.js",
   mode: isProduction ? 'production' : 'development',
   output: {
     path: path.resolve(__dirname, '../wwwroot'),
@@ -42,26 +42,18 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          hotReload: true // disables Hot Reload
-        }
-      },
-      {
-        test: [
-          path.join(__dirname, 'assets/styles/styles.scss'),
-        ],
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ]
       },
       {
         test: /\.(css|s[ac]ss)$/,
         use: [
           'style-loader',
-          'css-loader',
-          'sass-loader',
+          {loader: 'css-loader', options: {url: false}},
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('node-sass')
+            }
+          }
         ],
         exclude: [
           path.join(__dirname, 'assets/styles/styles.scss')
@@ -108,7 +100,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'fileManager/css/[name].bundle.css'
     }),
-    // new CleanWebpackPlugin(),
   ],
   optimization: {
     runtimeChunk: 'single',
