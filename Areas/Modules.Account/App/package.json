@@ -39,7 +39,9 @@
     "vuex": "^4.1.0",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "metismenujs": "^1.4.0",
+    "simplebar-vue": "^1.6.4"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",

@@ -34,6 +34,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets" />
+  </ItemGroup>
   <Target Name="UpdateTargetPath" BeforeTargets="AssignRazorGenerateTargetPaths">
     <ItemGroup>
       <RazorGenerate Include="@(RazorGenerate)" Link="$(TargetName)\%(RazorGenerate.RelativeDir)%(RazorGenerate.FileName)%(RazorGenerate.Extension)" />
