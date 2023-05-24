@@ -17,9 +17,10 @@ builder.Services.Configure<RazorViewEngineOptions>(options => {
 });
 
 builder.Services.AddMvc();
+builder.Services.AddSharedInfrastructure();
 var app = builder.Build();
 // Add services to the container.
-builder.Services.AddSharedInfrastructure(app.Configuration);
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
