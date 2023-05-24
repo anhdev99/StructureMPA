@@ -19,6 +19,11 @@
   height: 12px;
 }
 
+// Progress height Extra large
+.progress-xl {
+  height: 16px;
+}
+
 .custom-progess{
   position: relative;
   .progress-icon{
@@ -27,5 +32,22 @@
       .avatar-title{
         background: $card-bg;
       }
+  }
+}
+
+// animated-progess
+
+.animated-progess{
+  position: relative;
+  .progress-bar {
+    position: relative;
+    border-radius: 6px;
+    animation: animate-positive 2s;
+  }
+}
+
+@keyframes animate-positive {
+  0% {
+      width: 0;
   }
 }

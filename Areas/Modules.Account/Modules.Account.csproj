@@ -27,15 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="App\design\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Remove="App\design\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="App\design\**" />
+      <Content Include="App\design\.DS_Store" />
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">

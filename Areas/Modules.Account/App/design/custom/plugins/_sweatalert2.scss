@@ -5,9 +5,13 @@
 
 .swal2-container {
   .swal2-title{
-    font-size: 24px;
-    font-weight: $font-weight-medium;
+    font-size: 20px;
+    font-weight: $fw-medium;
   }  
+}
+
+.swal2-modal{
+  font-size: 14px;
 }
 
 .swal2-icon{
@@ -52,6 +56,6 @@
   }
 }
 
-.swal2-loader {
+.swal2-loader{
   border-color: $primary transparent $primary transparent;
 }

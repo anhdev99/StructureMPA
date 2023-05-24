@@ -2,120 +2,97 @@
 //
 // Select 2
 //
+@import "~vue-multiselect/dist/vue-multiselect.min.css";
 
-.select2-container {
-
-  .select2-selection--single {
-    background-color: $input-bg;
-    border: 1px solid $input-border-color;
-    height: 38px;
-    &:focus{
-      outline: none;
-    }
-
-    .select2-selection__rendered {
-      line-height: 36px;
-      padding-left: 12px;
-      color: $input-color;
-    }
-
-    .select2-selection__arrow {
-      height: 34px;
-      width: 34px;
-      right: 3px;
-
-      b{
-        border-color: $gray-500 transparent transparent transparent;
-        border-width: 6px 6px 0 6px;
-      }
-    }
+// set width of select
+.custom-multiselect {
+  .multiselect {
+    width: 350px;
   }
 }
 
-.select2-container--open {
-  .select2-selection--single {
-
-    .select2-selection__arrow {
-
-      b{
-        border-color: transparent transparent $gray-500 transparent !important;
-        border-width: 0 6px 6px 6px !important;
-      }
-    }
-  }
+.helo .multiselect__tags {
+  height: 20px !important;
 }
 
-.select2-container--default {
-  .select2-search--dropdown {
-      padding: 10px;
-      background-color: $dropdown-bg;
-      .select2-search__field {
-          border: 1px solid  $input-border-color;
-          background-color: $input-bg;
-          color: $gray-600;
-          outline: none;
-      }
-  }
-  .select2-results__option--highlighted[aria-selected] {
-      background-color: $primary;
-  }
-  .select2-results__option[aria-selected=true] {
-      background-color: $dropdown-link-active-bg;
-      color: $dropdown-link-active-color;
-      &:hover {
-          background-color: $primary;
-          color: $white;
-      }
-  }
+.multiselect__tags {
+  min-height: $input-height !important;
+  padding: $input-padding-y $input-padding-x !important;
+  font-family: $font-family-base !important;
+  @include font-size($input-font-size);
+  font-weight: $input-font-weight !important;
+  line-height: $input-line-height !important;
+  color: $input-color !important;
+  background-color: $input-bg !important;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color !important;
 }
 
-.select2-results__option {
-  padding: 6px 12px;
+.multiselect__placeholder {
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+  color: $gray-400 !important
 }
 
-.select2-dropdown {
-  border: $dropdown-border-color;
-  background-color: $dropdown-bg;
-  box-shadow: $box-shadow;
+.multiselect__input {
+  margin-bottom: 0 !important;
 }
 
-.select2-search {
-  input{
-    border: 1px solid $gray-300;
-  }
+.multiselect__single {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-.select2-container {
-  .select2-selection--multiple {
-    min-height: 38px;
-    background-color: $input-bg;
-    border: 1px solid $input-border-color !important;
-  
-    .select2-selection__rendered {
-      padding: 2px 10px;
-    }
-    .select2-search__field {
-      border: 0;
-      color: $input-color;
-      &::placeholder{
-          color: $input-color;
-      }
-  }
-    .select2-selection__choice {
-      background-color: $gray-200;
-      border: 1px solid $gray-300;
-      border-radius: 1px;
-      padding: 0 7px;
-    }
-  }
+.multiselect__tag {
+  background-color: $primary !important;
+  margin-bottom: 0 !important;
 }
 
-.select2-container--default{
-  &.select2-container--focus {
-    .select2-selection--multiple{
-      border-color: $gray-400;
-    }
-  }
+.multiselect__tag-icon:after {
+  color: $gray-100 !important;
+}
+
+.multiselect,
+.multiselect__input,
+.multiselect__single {
+  font-size: 13px !important;
+}
+
+.multiselect__input,
+.multiselect__single {
+  background-color: $input-bg !important;
+}
+
+.multiselect__content-wrapper {
+  background-color: $dropdown-bg !important;
+  border: 1px solid $input-border-color !important;
+}
+
+.mx-input::placeholder {
+  color: $input-placeholder-color;
+}
+
+.multiselect__input,
+.mx-calendar-icon,
+.mx-datepicker-btn-confirm,
+.multiselect__option {
+  color: $input-color !important;
+}
+
+
+.multiselect__option--highlight,
+.multiselect__option--highlight:after {
+  background: $primary !important;
+  color: $white !important;
+}
+
+
+// templating-select
+
+.img-flag{
+  margin-right: 7px;
+  height: 15px;
+  width: 18px;
 }
 
 

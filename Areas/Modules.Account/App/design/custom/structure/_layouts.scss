@@ -3,6 +3,7 @@
 // 
 
 body[data-layout-size="boxed"] {
+    background-color: $boxed-body-bg;
     #layout-wrapper {
         background-color: $body-bg;
         max-width: $boxed-layout-width;
@@ -27,17 +28,32 @@ body[data-layout-size="boxed"] {
     }
 }
 
+
 // Horizontal Boxed Layout
 
 body[data-layout="horizontal"][data-layout-size="boxed"]{
     #page-topbar, #layout-wrapper, .footer {
         max-width: 100%;
     }
-
-    #layout-wrapper {
-        box-shadow: none;
-    }
     .container-fluid, .navbar-header {
         max-width: $boxed-layout-width;
+    }
+}
+
+// Scrollable layout
+
+body[data-layout-scrollable="true"] {
+    @media (min-width: 992px) {
+        #page-topbar, .vertical-menu{
+            position: absolute;
+        }
+    }
+
+    &[data-layout="horizontal"]{
+        @media (min-width: 992px) {
+            #page-topbar, .topnav{
+                position: absolute;
+            }
+        }
     }
 }

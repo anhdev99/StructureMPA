@@ -5,16 +5,12 @@
 .topnav {
     background: $topnav-bg;
     padding: 0 calc(#{$grid-gutter-width} / 2);
-    box-shadow: $box-shadow-lg;
+    box-shadow: $box-shadow;
     margin-top: $header-height;
     position: fixed;
     left: 0;
     right: 0;
     z-index: 100;
-
-    @media (max-width: 991.98px){
-        background: $dropdown-bg;;
-    }
     
     .topnav-menu {
         margin: 0;
@@ -24,77 +20,38 @@
     .navbar-nav {
         
         .nav-link {
-            font-size: 14.5px;
+            font-size: 14px;
             position: relative;
             padding: 1rem 1.3rem;
             color: $menu-item-color;
             i{
                 font-size: 15px;
-                display: inline-block;
             }
             &:focus, &:hover{
-                color: $white;
-                background-color: transparent;
-                @media (max-width: 991.98px){
-                    color: $menu-item-active-color;
-                }
-            }
-
-            @media (max-width: 991.98px){
-                color: $header-item-color;
-            }
-        }
-
-        > .dropdown{
-            &.active{
-              >a {
-                    color: rgba($white, 0.9) !important;
-
-                    @media (max-width: 991.98px){
-                        color: $menu-item-active-color !important;
-                    }
-                }
-            }
-        }
-        
-        
-        .dropdown-item{
-            color: $menu-subitem-color;
-            &.active, &:hover{
                 color: $menu-item-active-color;
                 background-color: transparent;
             }
         }
         
+        .dropdown-item{
+            color: $menu-item-color;
+            &.active, &:hover{
+                color: $menu-item-active-color;
+            }
+        }
+        
         .nav-item{
             .nav-link.active{
-                color: rgba($white, 0.9);
-
-                @media (max-width: 991.98px){
-                    color: $menu-item-active-color !important;
-                }
+                color: $menu-item-active-color;
             }
         }
 
         .dropdown{
             &.active{
               >a {
-                    color: $sidebar-menu-item-active-color;
+                    color: $menu-item-active-color;
                     background-color: transparent;
                 }
-            }
-        }
-    }
-}
-body[data-layout="horizontal"] {
-    &[data-topbar="light"] {
-        .navbar-brand-box{
-            .logo-dark{
-                display: $display-block;
-            }
-
-            .logo-light{
-                display: $display-none;
             }
         }
     }
@@ -150,7 +107,7 @@ body[data-layout="horizontal"] {
                 .dropdown {
                     .dropdown-menu {
                         position: absolute;
-                        top: 0;
+                        top: 0 !important;
                         left: 100%;
                         display: none
                     }
@@ -194,14 +151,8 @@ body[data-layout="horizontal"] {
     }
 }
 
-body[data-layout="horizontal"]  #page-topbar{
-    @media (min-width: 992px) {
-        padding: 0 calc(#{$grid-gutter-width} / 2);
-    }
-}
 
-
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(lg) {
     .topnav-menu {
         .navbar-nav {
             li {
@@ -218,7 +169,20 @@ body[data-layout="horizontal"]  #page-topbar{
     }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(md) {
+
+    .navbar-brand-box{
+        .logo-dark {
+            display: $display-block;
+            span.logo-sm{
+                display: $display-block;
+            }
+        }
+    
+        .logo-light {
+            display: $display-none;
+        }
+    }
     
     .topnav {
         max-height: 360px;
@@ -236,8 +200,7 @@ body[data-layout="horizontal"]  #page-topbar{
                 border: none;
                 box-shadow: none;
                 padding-left: 15px;
-
-                &.mega-dropdown-menu{
+                &.dropdown-mega-menu-xl{
                     width: auto;
     
                     .row{
@@ -265,3 +228,120 @@ body[data-layout="horizontal"]  #page-topbar{
         }
     }
 }
+
+
+@include media-breakpoint-up(lg) {
+
+    body[data-layout="horizontal"][data-topbar="light"] {
+        .navbar-brand-box{
+            .logo-dark {
+                display: $display-block;
+            }
+        
+            .logo-light {
+                display: $display-none;
+            }
+        }
+
+        .topnav{
+            background-color: $primary;
+            .navbar-nav {
+        
+                .nav-link {
+                    color: rgba($white, 0.6);
+                    
+                    &:focus, &:hover{
+                        color: rgba($white, 0.9);
+                    }
+                }
+        
+                > .dropdown{
+                    &.active{
+                    >a {
+                            color: rgba($white, 0.9) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Colored Topbar 
+
+body[data-layout="horizontal"][data-topbar="colored"] {
+    #page-topbar{
+        background-color: $primary;
+        box-shadow: none;
+    }
+
+    .logo-dark {
+        display: none;
+    }
+
+    .logo-light {
+        display: block;
+    }
+
+    .app-search {
+    
+        .form-control {
+            background-color: rgba($topbar-search-bg,0.07);
+            color: $white;
+        }
+        span,
+        input.form-control::-webkit-input-placeholder {
+            color: rgba($white,0.5);
+        }
+    }
+    .header-item {
+        color: $header-dark-item-color;
+    
+        &:hover {
+            color: $header-dark-item-color;
+        }
+    }
+
+    .navbar-header {
+        .dropdown .show {
+            &.header-item{
+                background-color: rgba($white,0.1);
+            }
+        }
+
+        .waves-effect .waves-ripple {
+            background: rgba($white, 0.4);
+        }
+    }
+
+    .noti-icon {
+        i {
+            color: $header-dark-item-color;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .topnav{
+            background-color: $primary;
+            .navbar-nav {
+        
+                .nav-link {
+                    color: rgba($white, 0.6);
+                    
+                    &:focus, &:hover{
+                        color: rgba($white, 0.9);
+                    }
+                }
+        
+                > .dropdown{
+                    &.active{
+                      >a {
+                            color: rgba($white, 0.9) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

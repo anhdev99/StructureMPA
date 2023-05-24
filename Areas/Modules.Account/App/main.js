@@ -5,7 +5,7 @@ import router from "./router/index";
 import BootstrapVue from 'bootstrap-vue'
 
 import store from "./state/store";
-import "./design/index.scss";
+import "./design/app.scss";
 
 Vue.component('default-layout', () => import(/* webpackChunkName: "layout-container" */ './components/layout/DefaultLayout.vue'));
 Vue.use(VueRouter);

@@ -36,7 +36,7 @@
         .my#{$infix}-n#{$size} {
           margin-top: -$length !important;
         }
-        .mr#{$infix}-n#{$size},
+        .me#{$infix}-n#{$size},
         .mx#{$infix}-n#{$size} {
           margin-right: -$length !important;
         }
@@ -44,7 +44,7 @@
         .my#{$infix}-n#{$size} {
           margin-bottom: -$length !important;
         }
-        .ml#{$infix}-n#{$size},
+        .ms#{$infix}-n#{$size},
         .mx#{$infix}-n#{$size} {
           margin-left: -$length !important;
         }
@@ -57,7 +57,7 @@
     .my#{$infix}-auto {
       margin-top: auto !important;
     }
-    .mr#{$infix}-auto,
+    .me#{$infix}-auto,
     .mx#{$infix}-auto {
       margin-left: auto !important;
       margin-right: inherit !important;
@@ -70,7 +70,7 @@
       margin-right: auto !important;
       margin-left: auto !important;
     }
-    .ml#{$infix}-auto{
+    .ms#{$infix}-auto{
       margin-right: auto !important;
       margin-left: 0 !important;
     }

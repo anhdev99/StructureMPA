@@ -9,13 +9,7 @@ html {
 
 .h1,.h2,.h3,.h4,.h5,.h6,
 h1,h2,h3,h4,h5,h6 {
-  font-family: $font-family-secondary;
-  font-weight: $font-weight-semibold;
-}
-
-
-p{
-  line-height: 1.7;
+  color: $gray-700;
 }
 
 a {
@@ -23,12 +17,8 @@ a {
 }
 
 label {
-  font-weight: $font-weight-medium;
-}
-
-b,
-strong {
-  font-weight: $font-weight-medium;
+  font-weight: 500;
+  margin-bottom: $form-label-margin-bottom;
 }
 
 // blockquote
@@ -42,4 +32,20 @@ strong {
   border-left: 0;
   border-right: 4px solid $gray-300;
   text-align: right;
+}
+
+// container
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+  @media (min-width: 1200px){
+      max-width: 1140px;
+  }
+}
+
+// row
+
+.row{
+  > * {
+      position: relative;
+  }
 }

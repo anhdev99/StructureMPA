@@ -3,8 +3,8 @@
 //
 
 .avatar-xs {
-  height: 2.3rem;
-  width: 2.3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .avatar-sm {
@@ -18,8 +18,8 @@
 }
 
 .avatar-lg {
-  height: 5.5rem;
-  width: 5.5rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 .avatar-xl {
@@ -32,8 +32,25 @@
   background-color: $primary;
   color: $white;
   display: flex;
-  font-weight: $font-weight-medium;
+  font-weight: $fw-medium;
   height: 100%;
   justify-content: center;
   width: 100%;
+}
+
+// avatar group
+.avatar-group {
+  padding-left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  .avatar-group-item {
+    margin-left: -12px;
+    border: 2px solid $card-bg;
+    border-radius: 50%;
+    transition: all 0.2s;
+    &:hover{
+      position: relative;
+      transform: translateY(-2px);
+    }
+  }
 }

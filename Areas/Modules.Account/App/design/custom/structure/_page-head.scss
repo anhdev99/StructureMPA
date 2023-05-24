@@ -3,7 +3,7 @@
 // 
 
 .page-title-box {
-    padding: 24px 0px;
+    padding-bottom: $grid-gutter-width;
 
     .breadcrumb {
         background-color: transparent;
@@ -11,6 +11,8 @@
     }
 
     h4 {
-        font-weight: 700;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px !important;
     }
 }

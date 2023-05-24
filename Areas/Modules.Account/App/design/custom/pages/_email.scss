@@ -36,7 +36,7 @@
 .mail-list {
   a {
     display: block;
-    color: $text-muted;
+    color: $gray-600;
     line-height: 24px;
     padding: 8px 5px;
     &.active {
@@ -59,11 +59,11 @@
     transition-duration: .3s;
 
     a{
-      color: $text-muted;
+      color: $gray-600;
     }
 
     &:hover {
-      background: $gray-200;
+      background: $gray-300;
       transition-duration: .05s;
     }
 
@@ -148,7 +148,7 @@
 
     
   &.unread  {
-    background-color: $gray-200;
+    background-color: $gray-300;
     font-weight: 500;
     color: darken($dark,5%);
       a{
