@@ -9,10 +9,11 @@ import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 
 import store from "./state/store";
 import "./design/app.scss";
-import "./design/index.scss";
+
 Vue.component('default-layout', () => import(/* webpackChunkName: "layout-container" */ './components/layout/DefaultLayout.vue'));
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
+
 new Vue({
     router,
     store,
