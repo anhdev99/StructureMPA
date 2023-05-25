@@ -34,7 +34,15 @@ namespace Modules.Shared.Configurations
             {
                 return this._configuration["AppSeettings:EmailID"];
             }
-        } 
+        }
+
+        public string GetEnvironment
+        {
+            get
+            {
+                return this._configuration["AppSeettings:Environment"];
+            }
+        }
         public IConfigurationSection GetConfigurationSection(string key)
         {
             return this._configuration.GetSection(key);

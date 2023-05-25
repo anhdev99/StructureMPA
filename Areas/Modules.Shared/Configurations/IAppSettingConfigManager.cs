@@ -7,6 +7,8 @@ namespace Modules.Shared.Configurations
 
         string GetDatabaseName { get; }
         
+        string GetEnvironment { get; }
+        
         IConfigurationSection GetConfigurationSection(string Key);
         
         string AccountKey { get; }
