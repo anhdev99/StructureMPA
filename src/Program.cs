@@ -1,26 +1,33 @@
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.OpenApi.Models;
 using Modules.Account.Extensions;
 using Modules.FileManager.Extensions;
 using Modules.Shared.Extensions;
-
 using StructureMPA.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();;
 
+#region Register Libs
 builder.Services.AddAccountModule();
 builder.Services.AddFileManagerModule();
+builder.Services.AddSharedInfrastructure();
+#endregion
+
 
 builder.Services.Configure<RazorViewEngineOptions>(options => {
     options.ViewLocationExpanders.Add(new AreaViewLocationExpander());
 });
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "StructureMPA.WebAPI", Version = "v1" });
+});
 
 builder.Services.AddMvc();
-builder.Services.AddSharedInfrastructure();
-var app = builder.Build();
-// Add services to the container.
 
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -28,7 +35,11 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
-
+}
+else
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "StructureMPA.WebAPI v1")); 
 }
 
 app.UseHttpsRedirection();
@@ -63,10 +74,10 @@ app.UseStaticFiles(new StaticFileOptions()
         new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Areas/Modules.FileManager/wwwroot"))
     )
 });
+
 app.UseRouting();
 
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
