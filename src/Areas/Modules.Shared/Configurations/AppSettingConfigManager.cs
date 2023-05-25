@@ -1,6 +1,7 @@
-using Microsoft.Extensions.Configuration;
+
 namespace Modules.Shared.Configurations
 {
+    using Microsoft.Extensions.Configuration;
     public class AppSettingConfigManager : IAppSettingConfigManager
     {
         private readonly IConfiguration _configuration;

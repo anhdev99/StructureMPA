@@ -1,6 +1,6 @@
-using Microsoft.Extensions.Configuration;
 namespace Modules.Shared.Configurations
 {
+    using Microsoft.Extensions.Configuration;
     public interface IAppSettingConfigManager
     {
         string GetConnectionString(string connectionName);

@@ -1,8 +1,9 @@
-using Modules.Shared.Configurations;
-using Modules.Shared.Constants;
-using MongoDB.Driver;
 namespace Modules.Shared.Data
 {
+    using Configurations;
+    using Constants;
+    using MongoDB.Driver;
+    
     public class BaseDataContext
     {
         private readonly IAppSettingConfigManager _appSettingConfigManager;
@@ -20,13 +21,13 @@ namespace Modules.Shared.Data
         {
             switch (_appSettingConfigManager.GetEnvironment)
             {
-                case Constants.ENV.Production:
+                case Constants.Env.Production:
                 {
                     this._mongoClient = new MongoClient(_appSettingConfigManager.GetConnectionString(DatabaseName.MongoDb));
                     
                     break;
                 }
-                case Constants.ENV.Development:
+                case Constants.Env.Development:
                 {
                     _mongoClient = new MongoClient(_appSettingConfigManager.GetConnectionString(DatabaseName.MongoDbLocal)); 
                     break;

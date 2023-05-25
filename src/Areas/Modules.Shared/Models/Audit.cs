@@ -1,7 +1,8 @@
-using Modules.Shared.Extensions;
-using MongoDB.Bson.Serialization.Attributes;
 namespace Modules.Shared.Models
 {
+    using Extensions;
+    using MongoDB.Bson.Serialization.Attributes;
+    
     public class Audit
     {
         [BsonId]
